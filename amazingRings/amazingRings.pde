@@ -1,20 +1,22 @@
-int xI = 250;
-int xJ = 750;
-int i =300;
-void setup(){
+int moveXRight =250;
+int moveXLeft = 750;
+int i= 300;
+void setup() {
   size(1000, 1000);
-  for(i = 300; i>0; i -= 10){
-   ellipse(xI, 250, i, i); 
-  }
-  for(int j = 300; j>0; j -= 10){
-   ellipse(xJ, 250, j, j); 
+  background(250, 250, 250);
+  int x;
+  int y;
+}
+void draw() {
+  background(250, 250, 250);
+  bullseye(moveXRight, 250);
+  bullseye(moveXLeft, 250);
+  moveXRight++;
+  moveXLeft--;
+}
+void bullseye(int x, int y) {
+  for (int i = 300; i > 0; i -= 10) {
+    ellipse(x, y, i, i); 
+    noFill();
   }
 }
-void draw(){
-  for(int k = xI; k < 500; k +=20){
-   ellipse(k, 250, i, i); 
-  }
-  
-  
-}
-
